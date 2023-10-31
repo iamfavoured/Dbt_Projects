@@ -5,7 +5,7 @@ with orders AS (
     order_date,
     status
   FROM
-    `myfirst-bigquery-projectt.dbt_project.jaffle_shop_orders` )
+    {{ source ('jaffle_shop', 'jaffle_shop_orders') }} )
 
 
     select * from orders

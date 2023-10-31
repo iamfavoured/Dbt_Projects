@@ -1,3 +1,5 @@
+{{config(materialized='table')}}
+
 WITH
   customers AS (
   SELECT
@@ -5,6 +7,6 @@ WITH
     first_name,
     last_name
   FROM
-    `myfirst-bigquery-projectt.dbt_project.jaffle_shop_customers` )
+    {{ source ('jaffle_shop', 'jaffle_shop_customers')}} )
 
     select * from customers
