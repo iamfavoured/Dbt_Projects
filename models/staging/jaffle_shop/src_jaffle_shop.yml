@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: myfirst-bigquery-projectt
+    schema: dbt_project
+    tables:
+      - name: jaffle_shop_customers
+      - name: jaffle_shop_orders

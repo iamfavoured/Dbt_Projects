@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: myfirst-bigquery-projectt
+    schema: dbt_project
+    tables:
+      - name: stripe_payments
